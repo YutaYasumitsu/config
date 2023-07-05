@@ -27,7 +27,7 @@ jobs:
 
       - name: Push image to Docker Hub
         run: |
-          docker login docker.io --username ${{ secrets.DOCKER_NAME }} --password ${{ secrets.PASSWORD }}
+          docker login docker.io --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.PASSWORD }}
           docker image push ${{ secrets.DOCKER_USERNAME }}/gitops-go-app:${{ github.run_number }}
       
       - name: Update values.yaml & Pull Request to Config Repository
