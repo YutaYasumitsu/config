@@ -35,7 +35,7 @@ jobs:
           echo -e "machine github.com\nlogin ${{ secrets.GIT_USERNAME }}\npassword ${{ secrets.PASSWORD }}" > ~/.netrc
           git clone https://github.com/${{ secrets.GIT_USERNAME }}/config.git
           cd config/gitops-helm
-          git config --global user.email "${{ secrets.EMALE }}"
+          git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git branch feature/${{ github.run_number }}
           git checkout feature/${{ github.run_number }}
