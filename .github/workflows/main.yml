@@ -32,8 +32,8 @@ jobs:
       
       - name: Update values.yaml & Pull Request to Config Repository
         run: |
-          echo -e "machine ${{ secrets.GIT_USERNAME }}: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@github.com\nlogin ${{ secrets.GIT_USERNAME }}\npassword ${{ secrets.PASSWORD }}" > ~/.netrc
-          git clone https://${{ secrets.GIT_USERNAME }}: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@github.com/${{ secrets.GIT_USERNAME }}/config.git
+          echo -e "machine github.com\nlogin ${{ secrets.GIT_USERNAME }}\npassword ${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.netrc
+          git clone https://github.com/${{ secrets.GIT_USERNAME }}/config.git
           cd config/gitops-helm
           git config --global user.email "${{ secrets.EMAIL }}"
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
