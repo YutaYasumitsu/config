@@ -83,7 +83,7 @@ label: gitops
 replicas: 3
 image:
   repository: docker.io/yasuyuta/gitops-go-app
-  tag: 0
+  tag: 10
 
 imageConfig:
   pullPolicy: IfNotPresent
