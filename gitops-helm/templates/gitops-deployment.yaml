@@ -13,6 +13,6 @@ spec:
         app: {{ .Values.label }}
     spec:
       containers:
-      - name: {{ .Chart.label }}
+      - name: {{ .Chart.Name }}
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.imageConfig.pullPolicy }}
